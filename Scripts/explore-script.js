@@ -151,11 +151,15 @@ d3.json("assets/graph-new.json", function(error, graph) {
 			if (highlight_node === null) set_highlight(d)
 		})
 
+		// -------POPULATE HTML HERE!!!!!!!------- //
 		.on("mousedown", function(d) { 
 			d3.event.stopPropagation();
 		  focus_node = d;
 			set_focus(d)
 			if (highlight_node === null) set_highlight(d)
+
+			show_content(d.id, d.parent);
+			// console.log(d.id);
 		})
 
 		.on("mouseout", function(d) {
@@ -171,17 +175,17 @@ d3.json("assets/graph-new.json", function(error, graph) {
 			if (highlight_node === null) exit_highlight();
 		});
 
-	d3.select(window).on("mouseup", function() {
-		if (focus_node!==null){
-			focus_node = null;
-			if (highlight_trans<1){
-				circle.style("opacity", 1);
-			  text.style("opacity", 1);
-			  link.style("opacity", 1);
-			}
-		}
-		if (highlight_node === null) exit_highlight();
-	});
+	// d3.select(window).on("mouseup", function() {
+	// 	if (focus_node!==null){
+	// 		focus_node = null;
+	// 		if (highlight_trans<1){
+	// 			circle.style("opacity", 1);
+	// 		  text.style("opacity", 1);
+	// 		  link.style("opacity", 1);
+	// 		}
+	// 	}
+	// 	if (highlight_node === null) exit_highlight();
+	// });
 
 	function exit_highlight(){
 		highlight_node = null;

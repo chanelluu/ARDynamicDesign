@@ -40,11 +40,11 @@
     {"source": 20, "target": 16}
   ],
   "nodes": [
-    {"size": 60, "score": 0, "id": "Content Traits", "type": "circle"},
-      {"size": 20, "score": 0, "id": "Dimension", "type": "circle"},
-        {"size": 1, "score": 0, "id": "Two dimensional", "type": "circle"},
-        {"size": 1, "score": 0, "id": "Three dimensional", "type": "circle"},
-        {"size": 1, "score": 0, "id": "2.5 dimension", "type": "circle"},
+    {"size": 60, "score": 0, "id": "Content Traits", "type": "circle", "parent": "none"},
+      {"size": 20, "score": 0, "id": "Dimension", "type": "circle", "parent": "Content Traits"},
+        {"size": 1, "score": 0, "id": "Two dimensional", "type": "circle", "parent": "Dimension"},
+        {"size": 1, "score": 0, "id": "Three dimensional", "type": "circle", "parent": "Dimension"},
+        {"size": 1, "score": 0, "id": "2.5 dimension", "type": "circle", "parent": "Dimension"},
       {"size": 20, "score": 0, "id": "Origin", "type": "circle"},
         {"size": 1, "score": 0, "id": "Omni-present", "type": "circle"},
         {"size": 1, "score": 0, "id": "Manual", "type": "circle"},
