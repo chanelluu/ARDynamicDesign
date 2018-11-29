@@ -53,11 +53,3 @@ body{
 }
 
 /*---------Document Text Styles----------*/
-.body{
-	font-family: 'Noto Sans SC', sans-serif;
-  color: #4b3a41;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.8em;
-  margin: 1% 30%;
-}
