@@ -1,0 +1,53 @@
+body{
+	background-color: #efeced;
+	margin:0;
+  position: relative;
+}
+
+/*---------Top Menu Styles----------*/
+#menu{
+  height: 70px;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  background-color: #cac1c5;
+  width: 100%;
+  opacity: 0.97;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+/*	box-shadow: 0px 9px 10px 0.5px rgba(0,0,0,0.75);*/
+}
+
+.logo-img{
+  width: 35px;
+	margin: 50px 0 50px 50px;
+}
+
+.menu-items{
+  width:100%;
+  margin-right: 50px;
+}
+
+
+.menu-item-txt{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  line-height: 1.8em;
+  text-align: right;
+  margin: 3% 0 3% 4%;
+  float: right;
+}
+
+.page-title{
+	font-family: 'Noto Sans', sans-serif;
+  color: #4b3a41;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 20px;
+  width:40%;
+}

@@ -1,0 +1,23 @@
+body {
+  overflow:hidden;
+   margin:0;
+}
+
+text {
+  font-family: 'Noto Sans SC', sans-serif;
+  pointer-events: none;
+}
+
+#left-side-panel{
+  float:left;
+}
+#right-side-panel{
+  float: right;
+  width: 30%;
+  height: 100px;
+  background-color: white;
+}
+#container{
+  border:1px solid salmon;
+  padding-top:50px;
+}
