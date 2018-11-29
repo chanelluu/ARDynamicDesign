@@ -25,20 +25,32 @@
     {"source": 5, "target": 12},
     {"source": 6, "target": 13}],
   "nodes": [
-    {"size": 60, "score": 0, "id": "Androsynth", "type": "circle"},
-    {"size": 10, "score": 0.2, "id": "Chenjesu", "type": "circle"},
-    {"size": 60, "score": 0.4, "id": "Ilwrath", "type": "circle"},
-    {"size": 10, "score": 0.6, "id": "Mycon", "type": "circle"},
-    {"size": 60, "score": 0.8, "id": "Spathi", "type": "circle"},
-    {"size": 10, "score": 1, "id": "Umgah", "type": "circle"},
-    {"id": "VUX", "type": "circle"},
-    {"size": 60, "score": 0, "id": "Guardian", "type": "square"},
-    {"size": 10, "score": 0.2, "id": "Broodhmome", "type": "square"},
-    {"size": 60, "score": 0.4, "id": "Avenger", "type": "square"},
-    {"size": 10, "score": 0.6, "id": "Podship", "type": "square"},
-    {"size": 60, "score": 0.8, "id": "Eluder", "type": "square"},
-    {"size": 10, "score": 1, "id": "Drone", "type": "square"},
-    {"id": "Intruder", "type": "square"}],
+    {"size": 60, "score": 0, "id": "Content Traits", "type": "circle"},
+    {"size": 60, "score": 0, "id": "Content Types", "type": "square"},
+    {"size": 60, "score": 0, "id": "States", "type": "triangle"},
+    {"size": 60, "score": 0, "id": "Conditions", "type": "cross"},
+    {"size": 60, "score": 0, "id": "Interactions", "type": "diamond"},
+
+
+
+
+
+
+
+    // {"size": 10, "score": 0.2, "id": "Chenjesu", "type": "circle"},
+    // {"size": 60, "score": 0.4, "id": "Ilwrath", "type": "circle"},
+    // {"size": 10, "score": 0.6, "id": "Mycon", "type": "circle"},
+    // {"size": 60, "score": 0.8, "id": "Spathi", "type": "circle"},
+    // {"size": 10, "score": 1, "id": "Umgah", "type": "circle"},
+    // {"id": "VUX", "type": "circle"},
+    // {"size": 60, "score": 0, "id": "Guardian", "type": "square"},
+    // {"size": 10, "score": 0.2, "id": "Broodhmome", "type": "square"},
+    // {"size": 60, "score": 0.4, "id": "Avenger", "type": "square"},
+    // {"size": 10, "score": 0.6, "id": "Podship", "type": "square"},
+    // {"size": 60, "score": 0.8, "id": "Eluder", "type": "square"},
+    // {"size": 10, "score": 1, "id": "Drone", "type": "square"},
+    // {"id": "Intruder", "type": "square"}
+    ],
   "directed": false,
   "multigraph": false
 }
