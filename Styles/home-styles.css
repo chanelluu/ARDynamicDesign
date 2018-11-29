@@ -29,7 +29,8 @@ a{
 }
 
 .title{	
-  font-family: 'Noto Sans', sans-serif;
+  /*font-family: 'Noto Sans', sans-serif;*/
+  font-family: 'Unna', serif;
   color: #4b3a41;
   font-weight: 400;
   font-size: 34px;
