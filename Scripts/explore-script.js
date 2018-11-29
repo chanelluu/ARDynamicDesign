@@ -56,7 +56,7 @@ var zoom = d3.behavior.zoom().scaleExtent([min_zoom,max_zoom])
 var g = svg.append("g");
 svg.style("cursor","move");
 
-d3.json("assets/graphs.json", function(error, graph) {
+d3.json("assets/graph-new.json", function(error, graph) {
 
 	var linkedByIndex = {};
 	graph.links.forEach(function(d) {
@@ -218,7 +218,7 @@ d3.json("assets/graphs.json", function(error, graph) {
 		highlight_node = d;
 		if (highlight_color!="white"){
 		  circle.style(towhite, function(o) {
-		    return isConnected(d, o) ? highlight_color : "white";
+		    return isConnected(d, o) ? highlight_color : stroke_color;
 		  });
 			text.style("font-weight", function(o) {
 		    return isConnected(d, o) ? "bold" : "normal";
