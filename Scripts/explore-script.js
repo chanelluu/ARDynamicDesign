@@ -46,8 +46,8 @@ var max_stroke = 1.5;
 var max_base_node_size = 36;
 
 // -------Zoom control------- //	
-var min_zoom = 1;
-var max_zoom = 1;
+var min_zoom = 0.5;
+var max_zoom = 2;
 
 // -------Where the whole system goes------- //	
 var svg = d3.select("#left-side-panel").append("svg");
@@ -99,13 +99,13 @@ d3.json("assets/graph-new.json", function(error, graph) {
 	  .call(force.drag)
 
 	// -------Double Click Zoom and Set Position to Middle: Disable cause it's annoying------- //	  
-	// node.on("dblclick.zoom", function(d) { 
-	// 	d3.event.stopPropagation();
-	// 	var dcx = (window.innerWidth/2-d.x*zoom.scale());
-	// 	var dcy = (window.innerHeight/2-d.y*zoom.scale());
-	// 	zoom.translate([dcx,dcy]);
-	// 	g.attr("transform", "translate("+ dcx + "," + dcy  + ")scale(" + zoom.scale() + ")");
-	// });
+	node.on("dblclick.zoom", function(d) { 
+		d3.event.stopPropagation();
+		var dcx = (window.innerWidth/2-d.x*zoom.scale());
+		var dcy = (window.innerHeight/2-d.y*zoom.scale());
+		zoom.translate([dcx,dcy]);
+		g.attr("transform", "translate("+ dcx + "," + dcy  + ")scale(" + zoom.scale() + ")");
+	});
 
 	var tocolor = "fill";
 	var towhite = "stroke";
@@ -230,30 +230,30 @@ d3.json("assets/graph-new.json", function(error, graph) {
 	}
 
 	// -------Zoom Function: Disable cause it's annoying------- //		 	
-	// zoom.on("zoom", function() {
-	//   var stroke = nominal_stroke;
-	//   if (nominal_stroke*zoom.scale()>max_stroke) stroke = max_stroke/zoom.scale();
-	//   link.style("stroke-width",stroke);
-	//   circle.style("stroke-width",stroke);
+	zoom.on("zoom", function() {
+	  var stroke = nominal_stroke;
+	  if (nominal_stroke*zoom.scale()>max_stroke) stroke = max_stroke/zoom.scale();
+	  link.style("stroke-width",stroke);
+	  circle.style("stroke-width",stroke);
 	   
-	// 	var base_radius = nominal_base_node_size;
-	//   if (nominal_base_node_size*zoom.scale()>max_base_node_size) base_radius = max_base_node_size/zoom.scale();
+		var base_radius = nominal_base_node_size;
+	  if (nominal_base_node_size*zoom.scale()>max_base_node_size) base_radius = max_base_node_size/zoom.scale();
 	  
-	//   circle.attr("d", d3.svg.symbol()
-	//   .size(function(d) { return Math.PI*Math.pow(size(d.size)*base_radius/nominal_base_node_size||base_radius,2); })
-	//   .type(function(d) { return d.type; }))
+	  circle.attr("d", d3.svg.symbol()
+	  .size(function(d) { return Math.PI*Math.pow(size(d.size)*base_radius/nominal_base_node_size||base_radius,2); })
+	  .type(function(d) { return d.type; }))
 		
-	// 	//circle.attr("r", function(d) { return (size(d.size)*base_radius/nominal_base_node_size||base_radius); })
-	// 	if (!text_center) text.attr("dx", function(d) { return (size(d.size)*base_radius/nominal_base_node_size||base_radius); });
+		//circle.attr("r", function(d) { return (size(d.size)*base_radius/nominal_base_node_size||base_radius); })
+		if (!text_center) text.attr("dx", function(d) { return (size(d.size)*base_radius/nominal_base_node_size||base_radius); });
 
-	// 	var text_size = nominal_text_size;
-	//   if (nominal_text_size*zoom.scale()>max_text_size) text_size = max_text_size/zoom.scale();
-	//   text.style("font-size",text_size + "px");
+		var text_size = nominal_text_size;
+	  if (nominal_text_size*zoom.scale()>max_text_size) text_size = max_text_size/zoom.scale();
+	  text.style("font-size",text_size + "px");
 
-	// 	g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-	// });
+		g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+	});
 		 
-	// svg.call(zoom);	  
+	svg.call(zoom);	  
 
 	resize();
 	//window.focus();

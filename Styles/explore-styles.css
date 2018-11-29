@@ -31,3 +31,7 @@ text {
   line-height: 1.8em;
   margin: 1% 30%;
 }
+
+a{
+	text-decoration: none;
+}
