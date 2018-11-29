@@ -1,5 +1,8 @@
-var w = window.innerWidth;
-var h = window.innerHeight;
+// var w = window.innerWidth;
+// var h = window.innerHeight;
+
+var w = document.getElementById("left-side-panel").clientWidth;
+var h = window.innerHeight - document.getElementById("menu").clientHeight;
 
 var keyc = true, keys = true, keyt = true, keyr = true, keyx = true, keyd = true, keyl = true, keym = true, keyh = true, key1 = true, key2 = true, key3 = true, key0 = true
 
@@ -67,7 +70,7 @@ d3.json("assets/graphs.json", function(error, graph) {
 	function hasConnections(a) {
 		for (var property in linkedByIndex) {
 				s = property.split(",");
-				if ((s[0] == a.index || s[1] == a.index) && linkedByIndex[property]) 					return true;
+				if ((s[0] == a.index || s[1] == a.index) && linkedByIndex[property]) return true;
 		}
 		return false;
 	}
@@ -270,7 +273,9 @@ d3.json("assets/graphs.json", function(error, graph) {
 	});
 
 	function resize() {
-	  var width = window.innerWidth, height = window.innerHeight;
+		var width = document.getElementById("left-side-panel").clientWidth;
+		var height = window.innerHeight - document.getElementById("menu").clientHeight;
+	  // var width = window.innerWidth, height = window.innerHeight;
 		svg.attr("width", width).attr("height", height);
 	  
 		force.size([force.size()[0]+(width-w)/zoom.scale(),force.size()[1]+(height-h)/zoom.scale()]).resume();

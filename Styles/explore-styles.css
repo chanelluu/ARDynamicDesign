@@ -1,6 +1,6 @@
 body {
   overflow:hidden;
-   margin:0;
+  margin:0;
 }
 
 text {
@@ -10,14 +10,15 @@ text {
 
 #left-side-panel{
   float:left;
+  width:70%;
+  overflow: hidden;
 }
 #right-side-panel{
   float: right;
   width: 30%;
-  height: 100px;
+  height: 1000px;
   background-color: white;
 }
 #container{
-  border:1px solid salmon;
-  padding-top:50px;
+  padding-top:70px;
 }
