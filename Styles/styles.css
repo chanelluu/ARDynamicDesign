@@ -130,10 +130,17 @@ body{
   font-size: 15px;
   color: #4b3a41;
   letter-spacing: 0.04em;
-  border: none;
+  border: 2px solid rgba(0,0,0,0);
   border-radius: 43px;
   background-color: #a8d8dc;
   outline:none;
+}
+
+.btn-explore:hover{
+  transition-property: box-shadow;
+  transition-duration: 0.2s;
+  box-shadow: 0 0 0 0.09em #4b3a41, 0 0 0px rgba(0, 0, 0, 0);
+/*  border: 2px solid #4b3a41;*/
 }
 
 /*---------Column Styles----------*/
