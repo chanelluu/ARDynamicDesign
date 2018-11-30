@@ -6,7 +6,7 @@
     {"source": 0, "target": 9},
     {"source": 0, "target": 12},
     {"source": 0, "target": 15},
-    {"source": 0, "target": 19},
+
     
     {"source": 1, "target": 2},
     {"source": 1, "target": 3},
@@ -24,27 +24,13 @@
 
     {"source": 15, "target": 16},
     {"source": 15, "target": 17},
-    {"source": 15, "target": 18},
-
-    {"source": 19, "target": 20},
-    {"source": 19, "target": 21},
-    {"source": 19, "target": 22},
-    {"source": 19, "target": 23},
-    {"source": 19, "target": 24},
-    {"source": 19, "target": 25},
-
-    {"source": 20, "target": 2},
-    {"source": 20, "target": 6},
-    {"source": 20, "target": 11},
-    {"source": 20, "target": 14},
-    {"source": 20, "target": 16}
-  ],
+    {"source": 15, "target": 18}],
   "nodes": [
-    {"size": 60, "score": 0, "id": "Content Traits", "type": "circle", "parent": "none"},
-      {"size": 20, "score": 0, "id": "Dimension", "type": "circle", "parent": "Content Traits"},
-        {"size": 1, "score": 0, "id": "Two dimensional", "type": "circle", "parent": "Dimension"},
-        {"size": 1, "score": 0, "id": "Three dimensional", "type": "circle", "parent": "Dimension"},
-        {"size": 1, "score": 0, "id": "2.5 dimension", "type": "circle", "parent": "Dimension"},
+    {"size": 60, "score": 0, "id": "Content Traits", "type": "circle"},
+      {"size": 20, "score": 0, "id": "Dimension", "type": "circle"},
+        {"size": 1, "score": 0, "id": "Two dimensional", "type": "circle"},
+        {"size": 1, "score": 0, "id": "Three dimensional", "type": "circle"},
+        {"size": 1, "score": 0, "id": "2.5 dimension", "type": "circle"},
       {"size": 20, "score": 0, "id": "Origin", "type": "circle"},
         {"size": 1, "score": 0, "id": "Omni-present", "type": "circle"},
         {"size": 1, "score": 0, "id": "Manual", "type": "circle"},
@@ -58,15 +44,7 @@
       {"size": 20, "score": 0, "id": "Anchor", "type": "circle"},
         {"size": 1, "score": 0, "id": "Anchor to Device", "type": "circle"},
         {"size": 1, "score": 0, "id": "Anchor to World", "type": "circle"},
-        {"size": 1, "score": 0, "id": "Anchor to Object", "type": "circle"},
-
-    {"size": 60, "score": 1, "id": "Content Types", "type": "square"},
-      {"size": 20, "score": 1, "id": "2D GUI", "type": "square"},
-      {"size": 20, "score": 1, "id": "3D GUI", "type": "square"},
-      {"size": 20, "score": 1, "id": "3D Models in Real World", "type": "square"},
-      {"size": 20, "score": 1, "id": "3D Models in 3D World", "type": "square"},
-      {"size": 20, "score": 1, "id": "Diegetic UI", "type": "square"},
-      {"size": 20, "score": 1, "id": "Real World", "type": "square"}],
+        {"size": 1, "score": 0, "id": "Anchor to Object", "type": "circle"}],
   "directed": false,
   "multigraph": false
 }

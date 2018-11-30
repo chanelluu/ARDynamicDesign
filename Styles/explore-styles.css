@@ -1,5 +1,5 @@
 body {
-  overflow:hidden;
+/*  overflow:hidden;*/
   margin:0;
 }
 
@@ -8,20 +8,79 @@ text {
   pointer-events: none;
 }
 
-#left-side-panel{
-  float:left;
-  width:70%;
-  overflow: hidden;
-}
-#right-side-panel{
-  float: right;
-  width: 30%;
-  height: 1000px;
-  background-color: white;
+#menu{
+
+  background-color: #e3dfe1;
 }
 
 #container{
-  padding-top:70px;
+  padding-top:69px;
+/*  background-color:#efeced;*/
+}
+
+#left-side-panel{
+  position: fixed;
+  float:left;
+  width:65%;
+  overflow: hidden;
+
+}
+#right-side-panel{
+  position: fixed;
+  float: right;
+  width: 35%;
+  height: 100vh;
+  background-color: white;
+  overflow-y: scroll; 
+  right: 0;
+/*  top: 60px;
+  height:100vh;*/
+  background-color:#f9f9f9;
+  border: 1px solid #e3dfe1;
+}
+
+#menu-left-side-panel{
+  position: fixed;
+  float:left;
+  width:65%;
+  overflow: hidden;
+
+}
+#menu-right-side-panel{
+  position: fixed;
+  float: right;
+  width: 35%;
+  right: 0;
+  top: 20px;
+}
+
+.menu-item-txt{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  line-height: 1.8em;
+  margin: 0 0 0 7.5%;
+}
+
+.page-title{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0px 0 0 20px;
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 59px;
+}
+
+.logo-img{
+  width: 35px;
+  margin: 55px 0 50px 50px;
+  display: inline-block;
 }
 
 .explore-body{
@@ -41,9 +100,79 @@ text {
 }
 
 #populate-html-content{
-  margin: 5% 10%;
+  margin: 10% 7.5% 35% 7.5%;
 }
 
 a{
 	text-decoration: none;
 }
+
+
+/*--------Side content management-------*/
+.populated-content{
+  opacity:0;
+}
+
+.side-title-txt{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 0.01em;
+  line-height: 1.8em;
+}
+
+.side-subtitle-txt{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.8em;
+}
+
+.side-body-txt{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.65em;
+}
+
+/*--------List Numbering-------*/
+.list{
+  counter-reset: custom-counter;
+}
+
+.list dt{
+  position: relative;
+  font-family: 'Noto Sans SC', sans-serif;
+  padding: 4px 0 10px 0;
+  padding-left: 50px;
+}
+
+.list dt:before {
+  content: counter(custom-counter);
+  counter-increment: custom-counter;
+  position: absolute;
+  left: 0;
+  top: 17px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color:#d7d1d3;
+}
+
+.list dd {
+  display: block;
+  margin-inline-start: 40px;
+  margin: 0 0 37px 0;
+  padding-left: 50px;
+}
+
+
+
+
+
+
+
+

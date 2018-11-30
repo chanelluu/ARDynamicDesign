@@ -31,19 +31,19 @@ var size = d3.scale.pow()
 // -------Force among nodes------- //	
 var force = d3.layout
 	.force()
-  .linkDistance(150)
+  .linkDistance(80)
   .charge(-1500)
   .size([w,h]);
 
 var default_node_color = "#cac1c5";
 var default_link_color = "#cac1c5";
-var nominal_base_node_size = 20;
+var nominal_base_node_size = 10;
 var nominal_text_size = 16;
 var max_text_size = 20;
 var nominal_stroke = 1.5;
 var stroke_color= "#cac1c5"
 var max_stroke = 1.5;
-var max_base_node_size = 36;
+var max_base_node_size = 100;
 
 // -------Zoom control------- //	
 var min_zoom = 0.5;
@@ -158,7 +158,8 @@ d3.json("assets/graph-new.json", function(error, graph) {
 			set_focus(d)
 			if (highlight_node === null) set_highlight(d)
 
-			show_content(d.id, d.parent);
+			show_content(d.index);
+			console.log(d.index);
 			// console.log(d.id);
 		})
 

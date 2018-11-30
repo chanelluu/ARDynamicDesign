@@ -8,6 +8,38 @@ a{
   text-decoration: none;
 }
 
+#menu{
+  background-color: #e3dfe1;
+}
+
+.menu-item-txt{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  line-height: 1.8em;
+  text-align: right;
+  margin: 3% 0 3% 4%;
+  float: right;
+}
+
+.logo-img{
+  width: 35px;
+  margin: 55px 0 50px 50px;
+}
+
+
+.page-title{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0px 0 0 20px;
+  width:40%;
+}
+
 /*---------Div Styles----------*/
 .div-text{
 	width: 100%;

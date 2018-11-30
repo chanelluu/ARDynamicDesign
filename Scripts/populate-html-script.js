@@ -1,19 +1,29 @@
-function show_content(id,parent){
+// $(document).ready(function(){
+// 	$(".populated-content").hide();
+// })
 
-	
-	var transform = {"<>":"p","class":"${stylesid}","html":"${contentname}"};
 
-	var data = [
-		{'stylesid':'explore-title','contentname':id},
-		{'stylesid':'explore-body','contentname':parent}
-	];
+function show_content(id){
+	$("#populate-html-content").children().hide();
+	$("#side-nav").empty();
+	switch(id){
+		case 0:
+			$("#content-trait").css('opacity','1');
+			$("#content-trait").show();
+			$("#side-nav").append("Content Traits");
+		break;
 
-	// var transform = {'<>':'div','text':'${title}'};
+		case 1:
+			$("#dimensionality").css('opacity','1');
+			$("#dimensionality").show();
+			$("#side-nav").append("Content Traits&ensp;>&ensp;Dimensionality");
+		break;
 
-	// var data = [
-	// 	{'title':parent},
- //    {'title':id}
-	// ];
-	$("#populate-html-content").empty();
-	$("#populate-html-content").json2html(data,transform);
+		case 2:
+			$("#two-dimensions").css('opacity','1');
+			$("#two-dimensions").show();
+			$("#side-nav").append("Content Traits&ensp;>&ensp;Dimensionality&ensp;>&ensp;Two Dimensions");
+		break;
+
+	}
 }

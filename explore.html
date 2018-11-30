@@ -16,38 +16,91 @@
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.json2html/1.2.0/jquery.json2html.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="Scripts/populate-html-script.js"></script>
 
 </head>
 <body>
 	
 
 	<!-- Menu: anchored top -->
-	<div id="menu">
+<!-- 	<div id="menu">
 		<a href="index.html">
 			<img src="Resources/logo.png" alt="Logo Gif" class="logo-img">
 		</a>
-			<p class="page-title">AR DYNAMIC DESIGN</p>
+			<p class="page-title">CONTENT TAXONOMY</p>
 		<div class="menu-items">
 			<a href=" ">
 				<p class="menu-item-txt">Search</p>
 			</a>
 		</div>
+	</div> -->
+
+	<div id="menu" id="container">
+		<div id="menu-left-side-panel">
+			<a href="index.html"><img src="Resources/logo.png" alt="Logo Gif" class="logo-img"></a>
+			<p class="page-title">CONTENT TAXONOMY</p>
+		</div>
+		<div id="menu-right-side-panel">
+			<p class="menu-item-txt" id="side-nav"></p>
+		</div>
 	</div>
 
 	<div id="container">
+		<div id="left-side-panel">
+		</div>
 		<div id="right-side-panel">
 			<div id="populate-html-content">
-				<p class="explore-body">Click on a node to read about different types and traits of UI elements.</p>
+				<div id="intro">
+					<p class="side-title-txt">How to Use</p>
+					<p class="side-body-txt">Click on any node to read about different types and traits of UI elements.</p>
+					<p class="side-body-txt">Tip: Start with Content Traits.</p>
+				</div>
+
+				<!-------- 00.Content Trait --------->
+				<div class="populated-content" id="content-trait">
+					<p class="side-title-txt">Content Traits</p>
+					<p class="side-body-txt">
+						Although contents can come in many different shapes and forms, the below five questions can be used to break them down to their composing traits.
+					</p>
+					<dl class="list">
+						<dt class="side-subtitle-txt"> How many dimensions does it have? </dt>
+						<dd class="side-body-txt">Determines the <b>Dimensionality</b> of the component. There are three types of dimensions: two dimension, three dimensions and the lucrative 2.5 dimensions.</dd>
+						<dt class="side-subtitle-txt">Where does it come from?</dt>
+						<dd class="side-body-txt">Determines the <b>Origin</b> of the component. There are three types of origins: omni-present, manual and procedural.</dd>
+
+						<dt class="side-subtitle-txt">How does it change over time? </dt>
+						<dd class="side-body-txt">Determines the <b>Time-based Quality</b> of the component. There are two types of this quality: animated and still</dd>
+
+						<dt class="side-subtitle-txt"> Can you interact with it? </dt>
+						<dd class="side-body-txt">Determines the <b>Interactivity</b> of the component. There are two types of interactivity: static and dynamic</dd>
+
+						<dt class="side-subtitle-txt"> Where is it? </dt>
+						<dd class="side-body-txt">Determines the <b>Position</b> of the component. There are three types: anchor to device, anchor to world, and anchor to content.</dd>
+					</dl>
+				</div>
+
+				<!-------- 01.Dimensionality --------->
+				<div class="populated-content" id="dimensionality">
+					<p class="side-title-txt">Content Traits</p>
+					<p class="side-body-txt">
+						Dimensionality takes into consideration UI contents' functional dimension quality. There are three types of dimensionality
+					</p>
+				</div>
+
+				<!-------- 011.Two Dimension --------->
+				<div class="populated-content" id="two-dimensions">
+					<p class="side-title-txt">Two Dimensions</p>
+					<p class="side-body-txt">
+						Dimensionality takes into consideration UI contents' functional dimension quality. There are three types of dimensionality
+					</p>
+				</div>
+
 			</div>
-<!-- 			
-			<ul></ul> -->
-		</div>
-		<div id="left-side-panel">
 		</div>
 	</div>
 
-	<script src="https://d3js.org/d3.v3.min.js"></script>
-	<script src="Scripts/populate-html-script.js"></script>
+
 	<script src="Scripts/explore-script.js"></script>
 
 </body>
