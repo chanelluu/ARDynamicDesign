@@ -54,7 +54,7 @@ function show_content(id){
 			$("#side-nav").append("Content Attributes&ensp;>&ensp;Origin&ensp;>&ensp;Manual");
 		break;
 
-		case 5:
+		case 7:
 			$("#procedural").css('opacity','1');
 			$("#procedural").show();
 			$("#side-nav").append("Content Attributes&ensp;>&ensp;Origin&ensp;>&ensp;Procedural");
