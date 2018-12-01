@@ -21,21 +21,6 @@
 
 </head>
 <body>
-	
-
-	<!-- Menu: anchored top -->
-<!-- 	<div id="menu">
-		<a href="index.html">
-			<img src="Resources/logo.png" alt="Logo Gif" class="logo-img">
-		</a>
-			<p class="page-title">CONTENT TAXONOMY</p>
-		<div class="menu-items">
-			<a href=" ">
-				<p class="menu-item-txt">Search</p>
-			</a>
-		</div>
-	</div> -->
-
 	<div id="menu" id="container">
 		<div id="menu-left-side-panel">
 			<a href="index.html"><img src="Resources/logo.png" alt="Logo Gif" class="logo-img"></a>
@@ -53,54 +38,212 @@
 			<div id="populate-html-content">
 				<div id="intro">
 					<p class="side-title-txt">How to Use</p>
-					<p class="side-body-txt">Click on any node to read about different types and traits of UI elements.</p>
-					<p class="side-body-txt">Tip: Start with Content Traits.</p>
+					<p class="side-body-txt">Click on any node to read about different types and attributes of UI elements.</p>
+					<p class="side-body-txt">Tip: Start with Content attributes.</p>
 				</div>
 
-				<!-------- 00.Content Trait --------->
-				<div class="populated-content" id="content-trait">
-					<p class="side-title-txt">Content Traits</p>
+				<!-------- 00.Content attribute --------->
+				<div class="populated-content" id="content-attribute">
+					<p class="side-title-txt">Content Attributes</p>
 					<p class="side-body-txt">
-						Although contents can come in many different shapes and forms, the below five questions can be used to break them down to their composing traits.
+						Although contents can come in many different shapes and forms, the below five questions can be used to break them down to their composing attributes.
 					</p>
 					<dl class="list">
 						<dt class="side-subtitle-txt"> How many dimensions does it have? </dt>
-						<dd class="side-body-txt">Determines the <b>Dimensionality</b> of the component. There are three types of dimensions: two dimension, three dimensions and the lucrative 2.5 dimensions.</dd>
+						<dd class="side-body-txt">Determines the <b><a class="nav-link" id="1" href="">Dimensionality</a></b> of the component. There are two types of dimensions: two dimensions and three dimensions.</dd>
 						<dt class="side-subtitle-txt">Where does it come from?</dt>
-						<dd class="side-body-txt">Determines the <b>Origin</b> of the component. There are three types of origins: omni-present, manual and procedural.</dd>
+						<dd class="side-body-txt">Determines the <b><a class="nav-link" id="4" href="">Origin</a></b> of the component. There are three types of origins: omnipresent, manual and procedural.</dd>
 
 						<dt class="side-subtitle-txt">How does it change over time? </dt>
-						<dd class="side-body-txt">Determines the <b>Time-based Quality</b> of the component. There are two types of this quality: animated and still</dd>
+						<dd class="side-body-txt">Determines the <b><a class="nav-link" id="8" href="">Time-based Quality</a></b> of the component. There are two types of this quality: animated and still.</dd>
 
 						<dt class="side-subtitle-txt"> Can you interact with it? </dt>
-						<dd class="side-body-txt">Determines the <b>Interactivity</b> of the component. There are two types of interactivity: static and dynamic</dd>
+						<dd class="side-body-txt">Determines the <b><a class="nav-link" id="11" href="">Interactivity</a></b> of the component. There are two types of interactivity: static and dynamic.</dd>
 
 						<dt class="side-subtitle-txt"> Where is it? </dt>
-						<dd class="side-body-txt">Determines the <b>Position</b> of the component. There are three types: anchor to device, anchor to world, and anchor to content.</dd>
+						<dd class="side-body-txt">Determines the <b><a class="nav-link" id="14" href="">Position</a></b> of the component. There are three types: anchor to device, anchor to world, and anchor to content.</dd>
 					</dl>
 				</div>
 
 				<!-------- 01.Dimensionality --------->
 				<div class="populated-content" id="dimensionality">
-					<p class="side-title-txt">Content Traits</p>
+					<p class="side-title-txt">Dimensionality</p>
 					<p class="side-body-txt">
-						Dimensionality takes into consideration UI contents' functional dimension quality. There are three types of dimensionality
+						Dimensionality takes into consideration the UI contents' functional dimension attribute. There are two main types of dimensionality:
+					</p>
+					<div class="icons">
+						
+						<div class="icon-two">
+							<a id="2" href="">
+								<img class="img-size" src="Resources/Icons/01_Dimensionality_2D.png">
+								<p class="caption-txt"> Two Dimensions</p>
+							</a>
+						</div>
+						<div class="icon-two">
+							<a id="3" href="">
+								<img class="img-size" src="Resources/Icons/01_Dimensionality_3D.png">
+								<p class="caption-txt"> Three Dimensions</p>
+							</a>
+						</div>
+					</div>
+					<p class="side-body-txt">
+						Contents with more dimensions can fit better into the real world, while 2D contents are often used for important information and navigation.
 					</p>
 				</div>
 
 				<!-------- 011.Two Dimension --------->
 				<div class="populated-content" id="two-dimensions">
 					<p class="side-title-txt">Two Dimensions</p>
+					<img class="img-size" src="Resources/Icons/01_Dimensionality_2D.png">
 					<p class="side-body-txt">
-						Dimensionality takes into consideration UI contents' functional dimension quality. There are three types of dimensionality
+						As the name suggests, having two-dimension(2D) attribute means the content is flat. As the users move around, they cannot view different sides of contents with this attribute.
 					</p>
+					<p class="side-subtitle-txt">Design Guidelines</p>
+					<p class="side-body-txt">
+						Limit the number of contents with 2D attributes since they interfere with users’ perception of the space. Even those that are anchored in the real world through floor calibration will look out of place against the user&#39;s surrounding environment. 
+					</p>
+					<p class="side-subtitle-txt">Use Case</p>
+					<p class="side-body-txt">
+						2D attribute is often used for:  
+					</p>
+					<ul>
+						<li class="side-body-txt">Navigation (i.e. menu items)</li>
+						<li class="side-body-txt">
+							Guides and important information: without this, the users might miss out an essential part of the experience or lose the game (i.e., instruction, warning, score in a game)
+						</li>
+					</ul>
 				</div>
+
+				<!-------- 012.Three Dimension --------->
+				<div class="populated-content" id="three-dimensions">
+					<p class="side-title-txt">Three Dimensions</p>
+					<img class="img-size" src="Resources/Icons/01_Dimensionality_3D.png">
+					<p class="side-body-txt">
+						The three dimensions attribute allows users to view different sides of contents as they move their device or body around. 
+					</p>
+					<p class="side-subtitle-txt">Design Guidelines</p>
+					<p class="side-body-txt">
+						This attribute can make the content seems to fit into the real world, especially when combined with the anchor to world positioning.
+					</p>
+					<p class="side-body-txt">
+						Don&#39;t forget to design the back of the content as the users might be able to see it.
+					</p>
+					<img class="img-size full" src="Resources/Icons/01_Dimensionality_3D.gif">
+					<p class="side-subtitle-txt">Use Cases</p>
+					<p class="side-body-txt">
+						3D attribute is often used for:  
+					</p>
+					<ul>
+						<li class="side-body-txt">Content that is positioned in relation to a surface in the real world</li>
+						<li class="side-body-txt">
+							Content that overlays on top of or replaces a content in the real world
+						</li>
+					</ul>
+				</div>
+
+				<!-------- 02.Origin --------->
+				<div class="populated-content" id="origin">
+					<p class="side-title-txt">Origin</p>
+					<p class="side-body-txt">
+						The origin attribute determines how a content is inserted into the digital layer of the experience. There are three types of origin:
+					</p>
+					<div class="icons-three">
+						<div class="icon-three">
+							<a id="5" href="">
+								<img class="img-size-three" src="Resources/Icons/02_Origin_Omnipresent.png">
+								<p class="caption-txt"> Omnipresent</p>
+							</a>
+						</div>
+						<div class="icon-three">
+							<a id="6" href="">
+								<img class="img-size-three" src="Resources/Icons/02_Origin_Manual.gif">
+								<p class="caption-txt"> Manual</p>
+							</a>
+						</div>
+						<div class="icon-three">
+							<a id="7" href="">
+								<img class="img-size-three" src="Resources/Icons/02_Origin_Procedural.gif">
+								<p class="caption-txt"> Procedural</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-------- 021.Omnipresent --------->
+				<div class="populated-content" id="omnipresent">
+					<p class="side-title-txt">Omnipresent</p>
+					<img class="img-size-three full" src="Resources/Icons/02_Origin_Omnipresent.png">
+					<p class="side-body-txt">
+						Having the omnipresent attribute means the content is present in the application when the augmented reality feature is enabled. 
+					</p>
+					<p class="side-subtitle-txt">Design Guidelines</p>
+					<p class="side-body-txt">
+						Often combined with the anchor to device positioning, this attribute can require significant screen real estate.
+					</p>
+					<p class="side-body-txt">
+						Use the omnipresent attribute only for important contents. Ask yourself they are the types of contents that users need to look at or have access to at any time.
+					</p>
+					<p class="side-subtitle-txt">Use Cases</p>
+					<p class="side-body-txt">
+						Omnipresent attribute can be used to:  
+					</p>
+					<ul>
+						<li class="side-body-txt">Guide users through the calibration process</li>
+						<li class="side-body-txt">
+							Allow recalibration: It&#39;s a good practice to always allow users to recalibrate their environment at any time. The real world, as we all know, changes all the time.
+						</li>
+						<li class="side-body-txt">Access important navigational items, i.e., to toggle back and forth between AR and none-AR modse within the app.</li>
+					</ul>
+				</div>
+
+				<!-------- 022.Manual --------->
+				<div class="populated-content" id="manual">
+					<p class="side-title-txt">Manual</p>
+					<img class="img-size-three full" src="Resources/Icons/02_Origin_Manual.gif">
+					<p class="side-body-txt">
+						If a content can be manually added to the digital layer by the users, it has the manual attribute.  
+					</p>
+					<p class="side-subtitle-txt">Design Guidelines</p>
+					<p class="side-body-txt">
+						Contents with manual attribute should be well positioned within the real world. Users already have a complete control of the camera and they can easily tell if the contents that they add aren&#39;t where they want them to be. 
+					</p>
+					<p class="side-subtitle-txt">Use Cases</p>
+					<p class="side-body-txt">
+						Manual attribute is often used for:  
+					</p>
+					<ul>
+						<li class="side-body-txt">World building or interior design applications</li>
+						<li class="side-body-txt">Applying filters</li>
+					</ul>
+				</div>
+
+				<!-------- 023.Procedural --------->
+				<div class="populated-content" id="procedural">
+					<p class="side-title-txt">Procedural</p>
+					<img class="img-size-three full" src="Resources/Icons/02_Origin_Procedural.gif">
+					<p class="side-body-txt">
+						Content can be added by the system procedurally. This action is often triggered by a marker or geolocation. 
+					</p>
+					<p class="side-subtitle-txt">Design Guidelines</p>
+					<p class="side-body-txt">
+						Make sure the users know where the content is added. Design solutions to guide the users’ to look at where you want them to.
+					</p>
+					<p class="side-subtitle-txt">Use Cases</p>
+					<p class="side-body-txt">
+						Procedural attribute can be used to: 
+					</p>
+					<ul>
+						<li class="side-body-txt">Overlay or replace an element in the real world</li>
+						<li class="side-body-txt">Generate nonplayable characters in games</li>
+					</ul>
+				</div>
+
 
 			</div>
 		</div>
 	</div>
 
-
+	<!-- <script src="Scripts/explore-script-test.js"></script> -->
 	<script src="Scripts/explore-script.js"></script>
 
 </body>

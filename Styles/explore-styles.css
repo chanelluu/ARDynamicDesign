@@ -5,7 +5,7 @@ body {
 
 text {
   font-family: 'Noto Sans SC', sans-serif;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 #menu{
@@ -126,8 +126,8 @@ a{
   font-family: 'Noto Sans SC', sans-serif;
   color: #4b3a41;
   font-weight: 400;
-  font-size: 17px;
-  line-height: 1.8em;
+  font-size: 19px;
+  line-height: 2em;
 }
 
 .side-body-txt{
@@ -136,6 +136,84 @@ a{
   font-weight: 400;
   font-size: 14px;
   line-height: 1.65em;
+}
+
+.nav-link{
+  color:#1ba56c;
+}
+
+
+
+/*--------Icon Styles-------*/
+
+.icons{
+  display:flex;
+}
+
+.icon-two{
+  flex:50%;
+  width:0;
+}
+
+.icon-three{
+}
+
+.icon-two img{
+  opacity: 0.8;
+}
+
+.icon-three img{
+  opacity: 0.4;
+  margin-top:60px;
+  max-width: 100%;
+}
+
+.img-size{
+  width:70px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.img-size-three{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100% 
+}
+
+.small{
+  width:20%;
+}
+
+.full{
+  width:100%;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.caption-txt{
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #4b3a41;
+  font-weight: 400;
+  font-size: 14px;
+  text-align:center;
+}
+
+.icon-two:hover .caption-txt{
+  color:#1ba56c;
+}
+
+.icon-three:hover .caption-txt{
+  color:#1ba56c;
+}
+
+.icon:hover img{
+  opacity: 1;
+}
+
+.icon-three:hover img{
+  opacity: 1;
 }
 
 /*--------List Numbering-------*/

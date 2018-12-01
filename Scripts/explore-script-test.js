@@ -3,6 +3,7 @@
 
 var w = document.getElementById("left-side-panel").clientWidth;
 var h = window.innerHeight - document.getElementById("menu").clientHeight;
+var root;
 
 var keyc = true, keys = true, keyt = true, keyr = true, keyx = true, keyd = true, keyl = true, keym = true, keyh = true, key1 = true, key2 = true, key3 = true, key0 = true
 
@@ -56,10 +57,27 @@ var zoom = d3.behavior.zoom().scaleExtent([min_zoom,max_zoom])
 var g = svg.append("g");
 svg.style("cursor","move");
 
+// -------Draw the graph!------- //	
 d3.json("assets/graph-new.json", function(error, graph) {
+	if (error) throw error;
+	root = graph;
+	update();
+});
+
+function update(){
+
+	var nodes=[];
+	for (var i=0; i<root.nodes.length;i++){
+		var test = flatten(root.nodes[i]);
+		for (var x=0; x<test.length;x++){
+			nodes.push(test[x]);
+		}
+	}
+	console.log(nodes);
+	var links = d3.layout.tree().links(nodes);
 
 	var linkedByIndex = {};
-	graph.links.forEach(function(d) {
+	root.links.forEach(function(d) {
 		linkedByIndex[d.source + "," + d.target] = true;
 	});
 
@@ -76,12 +94,12 @@ d3.json("assets/graph-new.json", function(error, graph) {
 	}
 		
 	force
-	  .nodes(graph.nodes)
-	  .links(graph.links)
+	  .nodes(root.nodes)
+	  .links(root.links)
 	  .start();
 
 	var link = g.selectAll(".link")
-	  .data(graph.links)
+	  .data(root.links)
 	  .enter().append("line")
 	  .attr("class", "link")
 		.style("stroke-width",nominal_stroke)
@@ -93,7 +111,7 @@ d3.json("assets/graph-new.json", function(error, graph) {
 
 	var node = g
 		.selectAll(".node")
-	  .data(graph.nodes)
+	  .data(root.nodes)
 	  .enter().append("g")
 	  .attr("class", "node")
 	  .call(force.drag)
@@ -129,7 +147,7 @@ d3.json("assets/graph-new.json", function(error, graph) {
 		.style(towhite, stroke_color);
 
 	var text = g.selectAll(".text")
-	  .data(graph.nodes)
+	  .data(root.nodes)
 	  .enter().append("text")
 	  .attr("dy", ".35em")
 		.style("font-size", nominal_text_size + "px")
@@ -152,39 +170,41 @@ d3.json("assets/graph-new.json", function(error, graph) {
 		})
 
 		// -------POPULATE HTML HERE!!!!!!!------- //
-		.on("click", function(d) { 
+		.on("mousedown", function(d) { 
 			d3.event.stopPropagation();
 		  focus_node = d;
 			set_focus(d)
 			if (highlight_node === null) set_highlight(d)
+
 			show_content(d.index);
+			console.log(d);
+			// console.log(d.id);
 		})
 
-		// .on("mouseout", function(d) {
-		// 	exit_highlight();
-		// 	if (focus_node!==null){
-		// 		focus_node = null;
-		// 		if (highlight_trans<1){
-		// 			circle.style("opacity", 1);
-		// 		  text.style("opacity", 1);
-		// 		  link.style("opacity", 1);
-		// 		}
-		// 	}
-		// 	if (highlight_node === null) exit_highlight();
-		// });
-
-	d3.select(window).on("mouseup", function() {
-		exit_highlight();
-		if (focus_node!==null){
-			focus_node = null;
-			if (highlight_trans<1){
-				circle.style("opacity", 1);
-			  text.style("opacity", 1);
-			  link.style("opacity", 1);
+		.on("mouseout", function(d) {
+			exit_highlight();
+			if (focus_node!==null){
+				focus_node = null;
+				if (highlight_trans<1){
+					circle.style("opacity", 1);
+				  text.style("opacity", 1);
+				  link.style("opacity", 1);
+				}
 			}
-		}
-		if (highlight_node === null) exit_highlight();
-	});
+			if (highlight_node === null) exit_highlight();
+		});
+
+	// d3.select(window).on("mouseup", function() {
+	// 	if (focus_node!==null){
+	// 		focus_node = null;
+	// 		if (highlight_trans<1){
+	// 			circle.style("opacity", 1);
+	// 		  text.style("opacity", 1);
+	// 		  link.style("opacity", 1);
+	// 		}
+	// 	}
+	// 	if (highlight_node === null) exit_highlight();
+	// });
 
 	function exit_highlight(){
 		highlight_node = null;
@@ -326,7 +346,7 @@ d3.json("assets/graph-new.json", function(error, graph) {
 			}
 		}	
 	} 
-});
+}
 
 function vis_by_type(type){
 	switch (type) {
@@ -361,3 +381,33 @@ function vis_by_link_score(score){
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }	
+
+function flatten(root) {
+	  var nodes = [], i = 0;
+
+	  function recurse(node) {
+	  		if (node.children) {
+	  			node.children.forEach(recurse);
+	  		}
+	  		// console.log(node);
+		    if (!node.id) {
+		    	node.id = ++i;
+		    }
+		    nodes.push(node);
+  	}
+
+	  recurse(root);
+	  return nodes;
+}
+
+function click(d) {
+  if (d3.event.defaultPrevented) return; // ignore drag
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  update();
+}
