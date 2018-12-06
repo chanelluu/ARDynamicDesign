@@ -25,7 +25,7 @@
     {"source": 14, "target": 16},
     {"source": 14, "target": 17}],
   "nodes": [
-    {"size": 60, "score": 0, "id": "Content Attributes", "type": "circle"},
+    {"size": 60, "score": 0, "id": "Component Attributes", "type": "circle"},
       {"size": 20, "score": 0, "id": "Dimensionality", "type": "circle"},
         {"size": 1, "score": 0, "id": "Two dimensions", "type": "circle"},
         {"size": 1, "score": 0, "id": "Three dimensions", "type": "circle"},
@@ -39,7 +39,7 @@
       {"size": 20, "score": 0, "id": "Interactivity", "type": "circle"},
         {"size": 1, "score": 0, "id": "Static", "type": "circle"},
         {"size": 1, "score": 0, "id": "Dynamic", "type": "circle"},
-      {"size": 20, "score": 0, "id": "Anchor", "type": "circle"},
+      {"size": 20, "score": 0, "id": "Position", "type": "circle"},
         {"size": 1, "score": 0, "id": "Anchor to Device", "type": "circle"},
         {"size": 1, "score": 0, "id": "Anchor to World", "type": "circle"},
         {"size": 1, "score": 0, "id": "Anchor to Object", "type": "circle"}],
